@@ -13,10 +13,8 @@ protocol MainView2Delegate: NSObjectProtocol {
 
 class MainView: UIView {
     private let videoSizelabel = UILabel()
-    private let videoView1 = VideoView()
-    private let videoView2 = VideoView()
-    private let videoView3 = VideoView()
-    /// 切换视频分辨率
+    let videoView = VideoView()
+    
     private let switchBtn1 = UIButton()
     private let switchBtn2 = UIButton()
     private let switchBtn3 = UIButton()
@@ -32,35 +30,14 @@ class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setCurrentVideoViewDisplay(tag: Int) {
-        let videoViews = [videoView1, videoView2, videoView3]
-        
-        let remoteViews = videoViews.filter { $0.tag != tag }
-        remoteViews.forEach { $0.isHidden = true }
-        if let currentRemoteView = videoViews.first(where: { $0.tag == tag }) {
-            bringSubviewToFront(currentRemoteView)
-            currentRemoteView.isHidden = false
-        }
-    }
-    
-    func getCurrentVideoView(tag: Int) -> UIView {
-        let currentRemoteView = subviews.first(where: { $0.tag == tag })! as! VideoView
-        return currentRemoteView.renderView
-    }
-    
     private func setupUI() {
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.width
-        videoView1.frame = CGRect(x: 0, y: 0, width: width, height: height )
-        videoView2.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        videoView3.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        videoView1.isHidden = true
-        videoView2.isHidden = true
-        videoView3.isHidden = true
-        addSubview(videoView1)
-        addSubview(videoView2)
-        addSubview(videoView3)
-        
+        videoView.frame = CGRect(x: 0, y: 0, width: width, height: height )
+        videoView.frame = CGRect(x: 0, y: 0, width: width, height: height )
+        addSubview(videoView)
+        addSubview(videoView)
+
         /// 布局 switchBtn
         switchBtn1.setTitle("切到原始", for: .normal)
         switchBtn1.setTitleColor(.white, for: .normal)
@@ -85,17 +62,12 @@ class MainView: UIView {
         addSubview(switchBtn2)
         addSubview(switchBtn3)
         
-        
         videoSizelabel.textColor = .blue
         addSubview(videoSizelabel)
         videoSizelabel.frame = CGRect(x: 110, y: height + 10 + 50 + gap, width: UIScreen.main.bounds.size.width - 110, height: 45)
     }
     
     private func commonInit() {
-        videoView1.setTagForDisplay(tag: 1)
-        videoView2.setTagForDisplay(tag: 2)
-        videoView3.setTagForDisplay(tag: 3)
-        
         switchBtn1.addTarget(self, action: #selector(buttonTap(_:)), for: .touchUpInside)
         switchBtn2.addTarget(self, action: #selector(buttonTap(_:)), for: .touchUpInside)
         switchBtn3.addTarget(self, action: #selector(buttonTap(_:)), for: .touchUpInside)
@@ -118,44 +90,63 @@ class MainView: UIView {
 
 /// video view
 class VideoView: UIView {
-    let renderView = UIView()
+    let renderView1 = UIView()
+    let renderView2 = UIView()
     private let nameLabel = UILabel()
+    /// indicate which video view is using
+    var currentUsingVideoView1 = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(renderView)
+        addSubview(renderView1)
+        addSubview(renderView2)
         addSubview(nameLabel)
         
-        renderView.translatesAutoresizingMaskIntoConstraints = false
+        renderView1.translatesAutoresizingMaskIntoConstraints = false
+        renderView2.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        renderView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        renderView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        renderView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        renderView.bottomAnchor.constraint(equalTo: nameLabel.topAnchor).isActive = true
+        renderView1.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        renderView1.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        renderView1.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        renderView1.bottomAnchor.constraint(equalTo: nameLabel.topAnchor).isActive = true
+        
+        renderView2.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        renderView2.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        renderView2.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        renderView2.bottomAnchor.constraint(equalTo: nameLabel.topAnchor).isActive = true
         
         nameLabel.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         nameLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: renderView.bottomAnchor).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: renderView2.bottomAnchor).isActive = true
         nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        renderView1.tag = 1
+        renderView2.tag = 2
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setTagForDisplay(tag: Int) {
-        self.tag = tag
-        if tag == 1 {
-            nameLabel.text = "原始"
+    /// dispaly video view
+    func setCurrentVideoViewNeedToDisplay(text: String) {
+        if currentUsingVideoView1 {
+            nameLabel.text = text + "      [viewTag:\(renderView1.tag)]"
+            renderView1.isHidden = false
+            renderView2.isHidden = true
+        } else {
+            nameLabel.text = text + "      [viewTag:\(renderView2.tag)]"
+            renderView2.isHidden = false
+            renderView1.isHidden = true
         }
-        else if tag == 2 {
-            nameLabel.text = "720"
-        }
-        else if tag == 3 {
-            nameLabel.text = "480"
-        }
-        
         nameLabel.textColor = .red
+    }
+    
+    /// get a render view to display video
+    func getAvaiableRenderView() -> UIView {
+        currentUsingVideoView1 = !currentUsingVideoView1
+        let renderView = currentUsingVideoView1 ? renderView1 : renderView2
+        return renderView
     }
 }

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "260942D22952B5050022A50D"
-               BuildableName = "BestPracticesInMultiRateVideo.app"
-               BlueprintName = "BestPracticesInMultiRateVideo"
-               ReferencedContainer = "container:BestPracticesInMultiRateVideo.xcodeproj">
+               BuildableName = "MultirateVideoSample.app"
+               BlueprintName = "MultirateVideoSample"
+               ReferencedContainer = "container:MultirateVideoSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "260942D22952B5050022A50D"
-            BuildableName = "BestPracticesInMultiRateVideo.app"
-            BlueprintName = "BestPracticesInMultiRateVideo"
-            ReferencedContainer = "container:BestPracticesInMultiRateVideo.xcodeproj">
+            BuildableName = "MultirateVideoSample.app"
+            BlueprintName = "MultirateVideoSample"
+            ReferencedContainer = "container:MultirateVideoSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "260942D22952B5050022A50D"
-            BuildableName = "BestPracticesInMultiRateVideo.app"
-            BlueprintName = "BestPracticesInMultiRateVideo"
-            ReferencedContainer = "container:BestPracticesInMultiRateVideo.xcodeproj">
+            BuildableName = "MultirateVideoSample.app"
+            BlueprintName = "MultirateVideoSample"
+            ReferencedContainer = "container:MultirateVideoSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

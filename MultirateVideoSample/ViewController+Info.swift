@@ -13,6 +13,15 @@ extension ViewController {
         let channenName: String
         let uid: UInt
         let videoViewTag: Int
+        var tagName: String {
+            if channenName == "test" {
+                return "原始"
+            } else if channenName == "test_720P_web" {
+                return "720P"
+            } else {
+                return "480P"
+            }
+        }
     }
 }
 

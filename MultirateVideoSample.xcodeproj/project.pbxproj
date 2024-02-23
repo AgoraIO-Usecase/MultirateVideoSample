@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045593A1B58528D4B87CCE1D /* Pods_MultirateVideoSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0CE2D57C4630610D9AB246 /* Pods_MultirateVideoSample.framework */; };
 		260942D72952B5050022A50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260942D62952B5050022A50D /* AppDelegate.swift */; };
 		260942D92952B5050022A50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260942D82952B5050022A50D /* SceneDelegate.swift */; };
 		260942DE2952B5050022A50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 260942DC2952B5050022A50D /* Main.storyboard */; };
@@ -16,11 +17,10 @@
 		261566BA2B71E1CF0019DE20 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261566B92B71E1CF0019DE20 /* MainView.swift */; };
 		26485E5A299E57A000FE4CF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 260942DF2952B5060022A50D /* Assets.xcassets */; };
 		26C5452C2955B2FE009E0F37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C5452B2955B2FE009E0F37 /* Config.swift */; };
-		ED8C98E7F93D4058F5B48076 /* Pods_BestPracticesInMultiRateVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE24769C91AFDD8F4CFA825 /* Pods_BestPracticesInMultiRateVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		260942D32952B5050022A50D /* BestPracticesInMultiRateVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPracticesInMultiRateVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		260942D32952B5050022A50D /* MultirateVideoSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultirateVideoSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		260942D62952B5050022A50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		260942D82952B5050022A50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		260942DD2952B5050022A50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,11 +33,13 @@
 		26C5452729559918009E0F37 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		26C5452829559920009E0F37 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		26C5452B2955B2FE009E0F37 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		6798ADAE8E8BA1BC3B73A690 /* Pods-MultirateVideoSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultirateVideoSample.debug.xcconfig"; path = "Target Support Files/Pods-MultirateVideoSample/Pods-MultirateVideoSample.debug.xcconfig"; sourceTree = "<group>"; };
 		89F97A573AC3F9DA3505F7FD /* Pods-BestPracticesInMultiRateVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestPracticesInMultiRateVideo.debug.xcconfig"; path = "Target Support Files/Pods-BestPracticesInMultiRateVideo/Pods-BestPracticesInMultiRateVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		97B9305873CDD18897DEA957 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		9A0CE2D57C4630610D9AB246 /* Pods_MultirateVideoSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultirateVideoSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B11BABF3447B1F591F0171BB /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		CDE24769C91AFDD8F4CFA825 /* Pods_BestPracticesInMultiRateVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestPracticesInMultiRateVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EA0959679BF691E04A05D1 /* Pods-BestPracticesInMultiRateVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestPracticesInMultiRateVideo.release.xcconfig"; path = "Target Support Files/Pods-BestPracticesInMultiRateVideo/Pods-BestPracticesInMultiRateVideo.release.xcconfig"; sourceTree = "<group>"; };
+		EA0C1F1C421CADC514198396 /* Pods-MultirateVideoSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultirateVideoSample.release.xcconfig"; path = "Target Support Files/Pods-MultirateVideoSample/Pods-MultirateVideoSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED8C98E7F93D4058F5B48076 /* Pods_BestPracticesInMultiRateVideo.framework in Frameworks */,
+				045593A1B58528D4B87CCE1D /* Pods_MultirateVideoSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +61,8 @@
 				B11BABF3447B1F591F0171BB /* Pods-Demo.release.xcconfig */,
 				89F97A573AC3F9DA3505F7FD /* Pods-BestPracticesInMultiRateVideo.debug.xcconfig */,
 				D0EA0959679BF691E04A05D1 /* Pods-BestPracticesInMultiRateVideo.release.xcconfig */,
+				6798ADAE8E8BA1BC3B73A690 /* Pods-MultirateVideoSample.debug.xcconfig */,
+				EA0C1F1C421CADC514198396 /* Pods-MultirateVideoSample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -66,7 +70,7 @@
 		260942CA2952B5040022A50D = {
 			isa = PBXGroup;
 			children = (
-				260942D52952B5050022A50D /* BestPracticesInMultiRateVideo */,
+				260942D52952B5050022A50D /* MultirateVideoSample */,
 				260942D42952B5050022A50D /* Products */,
 				06F0A6A63C013F421339769D /* Pods */,
 				71C0091C9A3C4A9E26233CC8 /* Frameworks */,
@@ -76,12 +80,12 @@
 		260942D42952B5050022A50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				260942D32952B5050022A50D /* BestPracticesInMultiRateVideo.app */,
+				260942D32952B5050022A50D /* MultirateVideoSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		260942D52952B5050022A50D /* BestPracticesInMultiRateVideo */ = {
+		260942D52952B5050022A50D /* MultirateVideoSample */ = {
 			isa = PBXGroup;
 			children = (
 				260942D62952B5050022A50D /* AppDelegate.swift */,
@@ -95,7 +99,7 @@
 				260942E12952B5060022A50D /* LaunchScreen.storyboard */,
 				260942E42952B5060022A50D /* Info.plist */,
 			);
-			path = BestPracticesInMultiRateVideo;
+			path = MultirateVideoSample;
 			sourceTree = "<group>";
 		};
 		71C0091C9A3C4A9E26233CC8 /* Frameworks */ = {
@@ -103,7 +107,7 @@
 			children = (
 				26C5452829559920009E0F37 /* libz.tbd */,
 				26C5452729559918009E0F37 /* libc++.tbd */,
-				CDE24769C91AFDD8F4CFA825 /* Pods_BestPracticesInMultiRateVideo.framework */,
+				9A0CE2D57C4630610D9AB246 /* Pods_MultirateVideoSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		260942D22952B5050022A50D /* BestPracticesInMultiRateVideo */ = {
+		260942D22952B5050022A50D /* MultirateVideoSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 260942E72952B5060022A50D /* Build configuration list for PBXNativeTarget "BestPracticesInMultiRateVideo" */;
+			buildConfigurationList = 260942E72952B5060022A50D /* Build configuration list for PBXNativeTarget "MultirateVideoSample" */;
 			buildPhases = (
 				44D82870EE5AADE8177188F3 /* [CP] Check Pods Manifest.lock */,
 				260942CF2952B5050022A50D /* Sources */,
@@ -125,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = BestPracticesInMultiRateVideo;
+			name = MultirateVideoSample;
 			productName = Demo;
-			productReference = 260942D32952B5050022A50D /* BestPracticesInMultiRateVideo.app */;
+			productReference = 260942D32952B5050022A50D /* MultirateVideoSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 260942CE2952B5040022A50D /* Build configuration list for PBXProject "BestPracticesInMultiRateVideo" */;
+			buildConfigurationList = 260942CE2952B5040022A50D /* Build configuration list for PBXProject "MultirateVideoSample" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				260942D22952B5050022A50D /* BestPracticesInMultiRateVideo */,
+				260942D22952B5050022A50D /* MultirateVideoSample */,
 			);
 		};
 /* End PBXProject section */
@@ -193,7 +197,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BestPracticesInMultiRateVideo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MultirateVideoSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -206,15 +210,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BestPracticesInMultiRateVideo/Pods-BestPracticesInMultiRateVideo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MultirateVideoSample/Pods-MultirateVideoSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BestPracticesInMultiRateVideo/Pods-BestPracticesInMultiRateVideo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MultirateVideoSample/Pods-MultirateVideoSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestPracticesInMultiRateVideo/Pods-BestPracticesInMultiRateVideo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultirateVideoSample/Pods-MultirateVideoSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -371,7 +375,7 @@
 		};
 		260942E82952B5060022A50D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F97A573AC3F9DA3505F7FD /* Pods-BestPracticesInMultiRateVideo.debug.xcconfig */;
+			baseConfigurationReference = 6798ADAE8E8BA1BC3B73A690 /* Pods-MultirateVideoSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -381,7 +385,7 @@
 				DEVELOPMENT_TEAM = YS397FG5PA;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BestPracticesInMultiRateVideo/Info.plist;
+				INFOPLIST_FILE = MultirateVideoSample/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "声网需要您开启麦克风功能，用于视频通话";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "声网需要您开启相机功能，用于视频通话";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -407,7 +411,7 @@
 		};
 		260942E92952B5060022A50D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0EA0959679BF691E04A05D1 /* Pods-BestPracticesInMultiRateVideo.release.xcconfig */;
+			baseConfigurationReference = EA0C1F1C421CADC514198396 /* Pods-MultirateVideoSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -417,7 +421,7 @@
 				DEVELOPMENT_TEAM = YS397FG5PA;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BestPracticesInMultiRateVideo/Info.plist;
+				INFOPLIST_FILE = MultirateVideoSample/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "声网需要您开启麦克风功能，用于视频通话";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "声网需要您开启相机功能，用于视频通话";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -443,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		260942CE2952B5040022A50D /* Build configuration list for PBXProject "BestPracticesInMultiRateVideo" */ = {
+		260942CE2952B5040022A50D /* Build configuration list for PBXProject "MultirateVideoSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				260942E52952B5060022A50D /* Debug */,
@@ -452,7 +456,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		260942E72952B5060022A50D /* Build configuration list for PBXNativeTarget "BestPracticesInMultiRateVideo" */ = {
+		260942E72952B5060022A50D /* Build configuration list for PBXNativeTarget "MultirateVideoSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				260942E82952B5060022A50D /* Debug */,

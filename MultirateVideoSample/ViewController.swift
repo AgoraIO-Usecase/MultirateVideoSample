@@ -10,25 +10,25 @@ import AgoraRtcKit
 class ViewController: UIViewController {
     fileprivate let mainView = MainView(frame: .zero)
     private var agoraKit: AgoraRtcEngineKit!
-    /// 所有channel 信息
+    /// record all channel info
     fileprivate var channelInfos = [ChannelInfo]()
     
-    /// 上一个channel 信息
+    /// record last channel info
     fileprivate var lastChannelInfo: ChannelInfo?
-    /// 当前channel 信息
+    /// record current channel info
     fileprivate var currentChannelInfo: ChannelInfo!
     
-    /// 标识当前用哪一个connection
+    /// indicate which connection is using
     fileprivate var currentUsingConnection1 = false
     
-    /// 两个eventHandler 交替使用，用于接收rtc sdk 回调事件
+    /// event handler for connection1 and connection2
     fileprivate let eventHandler1 = EngineHandler()
     fileprivate let eventHandler2 = EngineHandler()
     
-    /// 两个connection 交替使用
+    /// two connections
     fileprivate var connection1: AgoraRtcConnection?
     fileprivate var connection2: AgoraRtcConnection?
-    /// 标识当前是否在切换频道
+    /// indicate if is changing channel
     fileprivate var isChanging = false
     
     override func viewDidLoad() {
@@ -128,7 +128,7 @@ class ViewController: UIViewController {
     }
     
     private func setupRemoteVideo(uid: UInt) {
-        let remoteView = mainView.getCurrentVideoView(tag: currentChannelInfo.videoViewTag)
+        let remoteView = mainView.videoView.getAvaiableRenderView()
         print("=== setupRemoteVideo uid \(uid) tag:\(currentChannelInfo.videoViewTag) view:\(remoteView)")
         let connection = currentUsingConnection1 ? connection1 : connection2
         let videoCanvas = AgoraRtcVideoCanvas()
@@ -192,11 +192,10 @@ extension ViewController: EventDelegate {
     
     func firstRemoteVideoFrameOfUid(uid: UInt, size: CGSize, elapsed: Int) {
         print("=== setCurrentVideoViewDisplay tag:\(currentChannelInfo.videoViewTag)")
-        
-        /// 17ms 后执行
+        /// delay 1 frame to set videoView
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.017) { [weak self] in
             guard let self = self else { return }
-            mainView.setCurrentVideoViewDisplay(tag: currentChannelInfo.videoViewTag)
+            mainView.videoView.setCurrentVideoViewNeedToDisplay(text: currentChannelInfo.tagName)
             leaveChannelIfNeeded()
             isChanging = false
         }
